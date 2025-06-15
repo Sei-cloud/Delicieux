@@ -8,6 +8,13 @@
   --color-black: #333333;
 }
 
+
+/* Make the layout take full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 /* ===== General Styles ===== */
 body {
   margin: 0;
@@ -15,6 +22,13 @@ body {
   background-color: var(--color-orange);
   color: var(--color-white);
   min-height: 100vh;
+    display: flex;
+  flex-direction: column;
+}
+
+/* Main content should grow and push footer down */
+main {
+  flex: 1;
 }
 
 h1, h2, h3, h4 {
@@ -101,7 +115,7 @@ footer {
   background-color: var(--color-orange-dark);
   color: var(--color-white);
   text-align: center;
-  padding: 20px;
+  padding: 10px;
   font-size: 0.95rem;
 }
 
