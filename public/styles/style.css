@@ -1,31 +1,153 @@
-body {
-  font-family: 'Quicksand', sans-serif;
-  background-color: #FF7F3F;
-  color: #fff;
-  margin: 0;
+/* ===== CSS Variables ===== */
+:root {
+  --color-orange: #FF7F3F;        /* Bright Orange */
+  --color-orange-dark: #ff6b35;    /* Deeper Orange for Navbar */
+  --color-orange-deep: #ff6a00;    /* Footer / Accent */
+  --color-white: #ffffff;
+  --color-white-soft: #fffbe0;
+  --color-black: #333333;
 }
 
+/* ===== General Styles ===== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  color: var(--color-white);
+}
+
+p {
+  font-size: 1.1rem;
+  color: var(--color-white);
+}
+
+/* ===== Navbar ===== */
 .bg-orange {
-  background-color: #FF6F1F !important;
+  background-color: var(--color-orange-dark) !important;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--color-white) !important;
+}
+
+.nav-link {
+  color: var(--color-white) !important;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  color: var(--color-white-soft) !important;
+  text-decoration: underline;
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: right;
+  }
+  .navbar-nav .nav-link {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* ===== Page Sections ===== */
+.section {
+  padding: 60px 20px;
 }
 
 .hero {
-  height: 100vh;
-  background: linear-gradient(
-      rgba(255, 127, 63, 0.8),
-      rgba(255, 127, 63, 0.8)
-    ),
-    url('https://images.unsplash.com/photo-1585238341986-d0d0ccf3b5d3?auto=format&fit=crop&w=1600&q=80');
-  background-size: cover;
-  background-position: center;
-  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  background-color: var(--color-orange);
 }
 
-.features i {
-  color: white;
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--color-white);
 }
 
-.footer {
-  background-color: #FF6F1F;
-  color: white;
+.hero p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+/* ===== Buttons ===== */
+.btn-white {
+  background-color: var(--color-white);
+  color: var(--color-orange-dark);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-white:hover {
+  background-color: var(--color-white-soft);
+  color: var(--color-orange-dark);
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: var(--color-orange-dark);
+  color: var(--color-white);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.95rem;
+}
+
+footer .social-icons a {
+  color: var(--color-white);
+  margin: 0 10px;
+  font-size: 1.2rem;
+  transition: color 0.2s;
+}
+
+footer .social-icons a:hover {
+  color: var(--color-white-soft);
+}
+
+/* ===== Recipe Cards ===== */
+.recipe-card {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease;
+}
+
+.recipe-card:hover {
+  transform: scale(1.02);
+}
+
+/* ===== Contact Form ===== */
+form input,
+form textarea {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  margin-bottom: 15px;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: 2px solid var(--color-orange-dark);
+}
+
+/* ===== Utility ===== */
+.text-orange {
+  color: var(--color-orange-dark);
 }
