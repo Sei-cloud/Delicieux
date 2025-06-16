@@ -1,7 +1,7 @@
 /* ===== CSS Variables ===== */
 :root {
-  --color-orange: #FF7F3F;        /* Bright Orange */
-  --color-orange-dark: #ff6b35;    /* Deeper Orange for Navbar */
+  --color-orange: #ee4916;        /* Bright Orange */
+  --color-orange-dark: #df3b00;    /* Deeper Orange for Navbar */
   --color-orange-deep: #ff6a00;    /* Footer / Accent */
   --color-white: #ffffff;
   --color-white-soft: #fffbe0;
